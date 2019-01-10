@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  develop:
+    build: .
+    image: lizefield/develop:1.1.0
+    container_name: develop
