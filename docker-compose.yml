@@ -3,5 +3,5 @@ version: '3'
 services:
   develop:
     build: .
-    image: lizefield/develop:1.1.0
+    image: lizefield/develop:1.2.0
     container_name: develop

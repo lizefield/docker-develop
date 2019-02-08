@@ -24,12 +24,12 @@ ENV PATH $ANYENV_HOME/bin:$PATH
 # install envs
 RUN source ~/.bashrc \
   && anyenv install rbenv \
-  && anyenv install ndenv \
+  && anyenv install nodenv \
   && anyenv install pyenv
 ENV RBENV_ROOT $ANYENV_ENV/rbenv
-ENV NDENV_ROOT $ANYENV_ENV/ndenv
+ENV NODENV_ROOT $ANYENV_ENV/nodenv
 ENV PYENV_ROOT $ANYENV_ENV/pyenv
-ENV PATH $RBENV_ROOT/bin:$RBENV_ROOT/shims:$NDENV_ROOT/bin:$NDENV_ROOT/shims:$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH
+ENV PATH $RBENV_ROOT/bin:$RBENV_ROOT/shims:$NODENV_ROOT/bin:$NODENV_ROOT/shims:$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH
 
 # install ruby
 RUN source ~/.bashrc \
@@ -39,8 +39,8 @@ RUN source ~/.bashrc \
 
 # install node
 RUN source ~/.bashrc \
-  && ndenv install v8.12.0 \
-  && ndenv global v8.12.0 \
+  && nodenv install v8.12.0 \
+  && nodenv global v8.12.0 \
   && npm install npm@6.4.1 -g \
   && npm install pm2 express -g
   
