@@ -39,8 +39,8 @@ RUN source ~/.bashrc \
 
 # install node
 RUN source ~/.bashrc \
-  && nodenv install v8.12.0 \
-  && nodenv global v8.12.0 \
+  && nodenv install 8.12.0 \
+  && nodenv global 8.12.0 \
   && npm install npm@6.4.1 -g \
   && npm install pm2 express -g
   
